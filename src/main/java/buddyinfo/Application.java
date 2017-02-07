@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class Application {
 
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+    /*private static final Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class);
@@ -32,6 +32,10 @@ public class Application {
                 System.out.println(b.toString());
             }
         };
+    }*/
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
     }
 
 }

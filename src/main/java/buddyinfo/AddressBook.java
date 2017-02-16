@@ -10,6 +10,8 @@ import java.util.List;
 @Entity
 public class AddressBook {
 
+    private String title;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -26,6 +28,14 @@ public class AddressBook {
     public void addBuddy(BuddyInfo b) { buddies.add(b); }
 
     public void removeBuddy(BuddyInfo b) { buddies.remove(b); }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     @Override
     public boolean equals(Object other) {

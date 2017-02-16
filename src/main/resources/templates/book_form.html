@@ -6,9 +6,8 @@
 </head>
 <body>
 <h1>Form</h1>
-<form action="#" th:action="@{/buddies/new}" th:object="${buddy}" method="post">
-    <p>Name: <input type="text" th:field="*{name}" /></p>
-    <p>Phone Number: <input type="text" th:field="*{phoneNumber}" /></p>
+<form action="#" th:action="@{/books/new}" th:object="${book}" method="post">
+    <p>Title: <input type="text" th:field="*{title}" /></p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
 </body>

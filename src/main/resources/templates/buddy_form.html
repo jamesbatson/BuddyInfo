@@ -9,6 +9,13 @@
 <form action="#" th:action="@{/buddies/new}" th:object="${buddy}" method="post">
     <p>Name: <input type="text" th:field="*{name}" /></p>
     <p>Phone Number: <input type="text" th:field="*{phoneNumber}" /></p>
+    <p>Address Book:
+        <select>
+            <option th:each="book : ${books}"
+                    th:value="${book}"
+                    th:text="${book.title}"/>
+        </select>
+    </p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
 </body>

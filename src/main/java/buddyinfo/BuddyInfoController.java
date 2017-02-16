@@ -17,9 +17,13 @@ public class BuddyInfoController {
     @Autowired
     BuddyInfoRepository repo;
 
+    @Autowired
+    AddressBookRepository bookRepo;
+
     @GetMapping("/buddies/new")
     public String buddyForm(Model model) {
         model.addAttribute("buddy", new BuddyInfo());
+        model.addAttribute("books", bookRepo.findAll());
         return "buddy_form";
     }
 

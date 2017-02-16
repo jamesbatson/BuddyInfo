@@ -6,6 +6,14 @@
 </head>
 <body>
 <h1>Buddies</h1>
+<table>
+    <th:block th:each="buddy : ${buddies}">
+        <tr>
+            <td th:text="${buddy.name}"></td>
+            <td th:text="${buddy.phoneNumber}"></td>
+        </tr>
+    </th:block>
+</table>
 <p><a href="/buddies/new" >Add a new Buddy</a></p>
 </body>
 </html>

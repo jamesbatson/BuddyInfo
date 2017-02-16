@@ -1,9 +1,6 @@
 package buddyinfo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by adambatson on 2/7/2017.
@@ -16,6 +13,9 @@ public class BuddyInfo {
     private Long id;
     private String name;
     private String phoneNumber;
+
+    @ManyToOne
+    private AddressBook book;
 
     protected BuddyInfo() {}
 

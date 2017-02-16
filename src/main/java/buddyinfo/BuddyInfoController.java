@@ -30,6 +30,9 @@ public class BuddyInfoController {
     @PostMapping("/buddies/new")
     public String postNewBuddy(@ModelAttribute BuddyInfo buddyInfo) {
         repo.save(buddyInfo);
+        AddressBook book = bookRepo.findOne(buddyInfo.getBook().getId());
+        book.addBuddy(buddyInfo);
+        bookRepo.save(book);
         return "new_buddy_result";
     }
 

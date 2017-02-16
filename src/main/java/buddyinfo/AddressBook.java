@@ -16,7 +16,7 @@ public class AddressBook {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.PERSIST)
     private List<BuddyInfo> buddies;
 
     public AddressBook() {
@@ -46,4 +46,6 @@ public class AddressBook {
         return false;
     }
 
+
+    public Long getId(){return id;}
 }

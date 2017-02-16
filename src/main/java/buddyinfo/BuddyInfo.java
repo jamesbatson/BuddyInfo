@@ -14,6 +14,10 @@ public class BuddyInfo {
     private String name;
     private String phoneNumber;
 
+    public AddressBook getBook() {
+        return book;
+    }
+
     @ManyToOne
     private AddressBook book;
 
@@ -39,6 +43,8 @@ public class BuddyInfo {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    public Long getId() {return id;}
 
     @Override
     public String toString() {
